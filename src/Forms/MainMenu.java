@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -22,6 +23,7 @@ public class MainMenu extends javax.swing.JFrame {
 DefaultTableModel tb;
 DefaultTableModel tb2;
 DefaultTableModel tb3;
+int bb1, bb2, bb3, bb4, bb5, bb6, bb7, bb8, bb9, bb10;
 Koneksi conn= new Koneksi();
     /**
      * Creates new form MainMenu
@@ -31,6 +33,8 @@ Koneksi conn= new Koneksi();
         tabelmodel();
         tabelmodelnormalisasi();
         tabelmodelPERINGKAT();
+        jspHome.setVisible(true);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
 
     /**
@@ -43,101 +47,84 @@ Koneksi conn= new Koneksi();
     private void initComponents() {
 
         panel1 = new usu.widget.Panel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        panel6 = new usu.widget.Panel();
         jPanel4 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
+        btnHome = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jspAlternatif = new javax.swing.JScrollPane();
-        pnAlternatif = new usu.widget.Panel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblAlternatif = new javax.swing.JTable();
-        tfAlternatif = new javax.swing.JLabel();
-        jspNormalisasi = new javax.swing.JScrollPane();
-        panel3 = new usu.widget.Panel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tblNormalisasi = new javax.swing.JTable();
-        jLabel4 = new javax.swing.JLabel();
-        jspPerangkingan = new javax.swing.JScrollPane();
-        panel4 = new usu.widget.Panel();
+        jspHome = new javax.swing.JScrollPane();
+        panel2 = new usu.widget.Panel();
+        jspTambahData = new usu.widget.Panel();
+        jPanel5 = new javax.swing.JPanel();
+        tfNama = new javax.swing.JTextField();
+        cbPenghasilan = new javax.swing.JComboBox<>();
+        cbJaminan = new javax.swing.JComboBox<>();
+        cbStatus = new javax.swing.JComboBox<>();
+        cbKondisi = new javax.swing.JComboBox<>();
+        cbKepribadian = new javax.swing.JComboBox<>();
+        cbHarta = new javax.swing.JComboBox<>();
+        cbKemampuan = new javax.swing.JComboBox<>();
+        cbTanggungan = new javax.swing.JComboBox<>();
+        cbKepemilikan = new javax.swing.JComboBox<>();
+        cbPTambahan = new javax.swing.JComboBox<>();
+        jPanel2 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        button1 = new usu.widget.Button();
+        jspPerangkingan = new usu.widget.Panel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblPerangkingan = new javax.swing.JTable();
-        jLabel3 = new javax.swing.JLabel();
-        jspTambahData = new javax.swing.JScrollPane();
-        pnTambahData = new usu.widget.Panel();
-        jPanel5 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox7 = new javax.swing.JComboBox<>();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        jComboBox9 = new javax.swing.JComboBox<>();
-        jComboBox10 = new javax.swing.JComboBox<>();
-        jButton5 = new javax.swing.JButton();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jspAlternatif = new usu.widget.Panel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblAlternatif = new javax.swing.JTable();
+        jspNormalisasi = new usu.widget.Panel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblNormalisasi = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1366, 768));
-        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panel1.setBackground(new java.awt.Color(153, 153, 153));
+        panel1.setBackground(new java.awt.Color(17, 88, 51));
+        panel1.setPreferredSize(new java.awt.Dimension(1366, 760));
+        panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(46, 216, 113));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1366, 79));
+        panel6.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/Header.png"))); // NOI18N
+        panel6.setBackgroundImageType(usu.widget.constan.BackgroundConstan.BACKGROUND_IMAGE_TILED);
+        panel6.setPreferredSize(new java.awt.Dimension(1366, 149));
 
-        jLabel1.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Sistem Pendukung Keputusan");
-
-        jLabel2.setFont(new java.awt.Font("Bebas Neue", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("MEtode SAW");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addContainerGap(1046, Short.MAX_VALUE))
+        javax.swing.GroupLayout panel6Layout = new javax.swing.GroupLayout(panel6);
+        panel6.setLayout(panel6Layout);
+        panel6Layout.setHorizontalGroup(
+            panel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        panel6Layout.setVerticalGroup(
+            panel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 149, Short.MAX_VALUE)
         );
+
+        panel1.add(panel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, -1));
+
+        jPanel4.setAlignmentX(0.0F);
+        jPanel4.setAlignmentY(0.0F);
 
         jPanel3.setLayout(new java.awt.GridLayout(0, 1, 0, 5));
 
+        btnHome.setBackground(new java.awt.Color(204, 255, 102));
+        btnHome.setFont(new java.awt.Font("Consolas", 1, 12)); // NOI18N
+        btnHome.setText("Beranda");
+        btnHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHomeActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnHome);
+
+        jButton1.setBackground(new java.awt.Color(204, 255, 102));
+        jButton1.setFont(new java.awt.Font("Consolas", 1, 12)); // NOI18N
         jButton1.setText("Tambah Data");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,7 +133,9 @@ Koneksi conn= new Koneksi();
         });
         jPanel3.add(jButton1);
 
-        jButton4.setText("Tabel Alternatif");
+        jButton4.setBackground(new java.awt.Color(204, 255, 102));
+        jButton4.setFont(new java.awt.Font("Consolas", 1, 12)); // NOI18N
+        jButton4.setText("Alternatif");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -154,6 +143,8 @@ Koneksi conn= new Koneksi();
         });
         jPanel3.add(jButton4);
 
+        jButton2.setBackground(new java.awt.Color(204, 255, 102));
+        jButton2.setFont(new java.awt.Font("Consolas", 1, 12)); // NOI18N
         jButton2.setText("Normalisasi");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,6 +153,8 @@ Koneksi conn= new Koneksi();
         });
         jPanel3.add(jButton2);
 
+        jButton3.setBackground(new java.awt.Color(204, 255, 102));
+        jButton3.setFont(new java.awt.Font("Consolas", 1, 12)); // NOI18N
         jButton3.setText("Perangkingan");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -176,113 +169,128 @@ Koneksi conn= new Koneksi();
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(284, Short.MAX_VALUE))
         );
+
+        panel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 140, 570));
+        jPanel4.getAccessibleContext().setAccessibleName("");
 
         jPanel1.setLayout(new java.awt.CardLayout());
 
-        pnAlternatif.setPreferredSize(new java.awt.Dimension(1268, 751));
+        jspHome.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        tblAlternatif.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "No", "Nama", "Penghasilan", "Jaminan", "Status Usaha", "Kondisi Usaha", "Kepribadian", "Harta Milik", "Kemampuan", "Tanggungan", "Kepemilikan Rumah", "Penghasilan Tambahan"
+        panel2.setBackground(new java.awt.Color(153, 0, 204));
+        panel2.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/bgHome1.png"))); // NOI18N
+        panel2.setBackgroundImageType(usu.widget.constan.BackgroundConstan.BACKGROUND_IMAGE_TILED);
+        panel2.setPreferredSize(new java.awt.Dimension(1268, 610));
+        panel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jspHome.setViewportView(panel2);
+
+        jPanel1.add(jspHome, "card6");
+
+        jspTambahData.setBackground(new java.awt.Color(255, 255, 204));
+        jspTambahData.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmTambahData2.png"))); // NOI18N
+        jspTambahData.setBackgroundImageType(usu.widget.constan.BackgroundConstan.BACKGROUND_IMAGE_STRECT);
+        jspTambahData.setMaximumSize(new java.awt.Dimension(1268, 750));
+        jspTambahData.setPreferredSize(new java.awt.Dimension(1268, 610));
+        jspTambahData.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel5.setBackground(new java.awt.Color(46, 204, 113));
+        jPanel5.setLayout(new java.awt.GridLayout(0, 1, 5, 5));
+
+        tfNama.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        tfNama.setText("Masukkan Nama");
+        jPanel5.add(tfNama);
+
+        cbPenghasilan.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        cbPenghasilan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Penghasilan", "1-<3 Juta", "3-<5 juta", "5-<7 juta", ">9 Juta", " " }));
+        cbPenghasilan.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cbPenghasilanItemStateChanged(evt);
             }
-        ));
-        tblAlternatif.setPreferredSize(new java.awt.Dimension(1268, 751));
-        jScrollPane1.setViewportView(tblAlternatif);
-
-        tfAlternatif.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        tfAlternatif.setText("Tabel Alternatif");
-
-        javax.swing.GroupLayout pnAlternatifLayout = new javax.swing.GroupLayout(pnAlternatif);
-        pnAlternatif.setLayout(pnAlternatifLayout);
-        pnAlternatifLayout.setHorizontalGroup(
-            pnAlternatifLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnAlternatifLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnAlternatifLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tfAlternatif)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnAlternatifLayout.setVerticalGroup(
-            pnAlternatifLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnAlternatifLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tfAlternatif)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(346, Short.MAX_VALUE))
-        );
-
-        jspAlternatif.setViewportView(pnAlternatif);
-
-        jPanel1.add(jspAlternatif, "card6");
-
-        jspNormalisasi.setPreferredSize(new java.awt.Dimension(1270, 753));
-
-        panel3.setPreferredSize(new java.awt.Dimension(1268, 751));
-
-        tblNormalisasi.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+        });
+        cbPenghasilan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbPenghasilanActionPerformed(evt);
             }
-        ));
-        tblNormalisasi.setPreferredSize(new java.awt.Dimension(1168, 751));
-        tblNormalisasi.setRowSorter(null);
-        jScrollPane2.setViewportView(tblNormalisasi);
+        });
+        jPanel5.add(cbPenghasilan);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("Tabel Normalisasi");
+        cbJaminan.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        cbJaminan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Jaminan Kredit", "<10 Juta", ">10 Juta - 25 Juta", ">25 Juta - 35 Juta", ">35 Juta - 50 Juta", ">50 Juta" }));
+        jPanel5.add(cbJaminan);
 
-        javax.swing.GroupLayout panel3Layout = new javax.swing.GroupLayout(panel3);
-        panel3.setLayout(panel3Layout);
-        panel3Layout.setHorizontalGroup(
-            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panel3Layout.setVerticalGroup(
-            panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(358, Short.MAX_VALUE))
-        );
+        cbStatus.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        cbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Status Usaha", "Milik Bersama", "Milik Keluarga", "Milik Pribadi" }));
+        jPanel5.add(cbStatus);
 
-        jspNormalisasi.setViewportView(panel3);
+        cbKondisi.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        cbKondisi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Kondisi Usaha", "Usaha Macet", "Usaha Diragukan", "Usaha Mulai Berkembang", "Usaha Berkembang", "Usaha Berkembang Pesat" }));
+        jPanel5.add(cbKondisi);
 
-        jPanel1.add(jspNormalisasi, "card7");
+        cbKepribadian.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        cbKepribadian.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Kepribadian Nasabah", "Sangat Kurang", "Kurang", "Cukup", "Baik", "Sangat Baik" }));
+        jPanel5.add(cbKepribadian);
 
-        jspPerangkingan.setPreferredSize(new java.awt.Dimension(1270, 753));
+        cbHarta.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        cbHarta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Harta Milik", ">25 Juta", ">50 Juta", ">75 Juta", ">100 Juta", ">125 Juta" }));
+        jPanel5.add(cbHarta);
 
-        panel4.setPreferredSize(new java.awt.Dimension(1270, 753));
+        cbKemampuan.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        cbKemampuan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kemampuan Melunasi Hutang", "Sangat Kurang", "Kurang", "Cukup", "Baik", "Sangat Baik" }));
+        cbKemampuan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbKemampuanActionPerformed(evt);
+            }
+        });
+        jPanel5.add(cbKemampuan);
+
+        cbTanggungan.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        cbTanggungan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tanggungan Hidup", ">11 Orang", "9-11 Orang", "6-8 Orang", "3-5 Orang", "1-2 Orang" }));
+        jPanel5.add(cbTanggungan);
+
+        cbKepemilikan.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        cbKepemilikan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kepemilikan Rumah", "Kontrak", "Ikut Orang Tua", "Milik Pribadi" }));
+        jPanel5.add(cbKepemilikan);
+
+        cbPTambahan.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
+        cbPTambahan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kepemilikan Rumah", ">1 Juta", ">2 Juta", ">3 Juta", ">4 Juta", ">5 Juta" }));
+        jPanel5.add(cbPTambahan);
+
+        jspTambahData.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 248, 304));
+
+        jPanel2.setBackground(new java.awt.Color(46, 204, 113));
+        jPanel2.setLayout(new java.awt.GridLayout(1, 0, 5, 0));
+
+        jButton5.setFont(new java.awt.Font("Consolas", 1, 20)); // NOI18N
+        jButton5.setText("Simpan");
+        jButton5.setBorderPainted(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton5);
+
+        button1.setText("Batal");
+        button1.setFont(new java.awt.Font("Consolas", 1, 20)); // NOI18N
+        jPanel2.add(button1);
+
+        jspTambahData.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 480, 270, 40));
+
+        jPanel1.add(jspTambahData, "card7");
+
+        jspPerangkingan.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmRangking.png"))); // NOI18N
+        jspPerangkingan.setPreferredSize(new java.awt.Dimension(1268, 610));
+        jspPerangkingan.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblPerangkingan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -298,189 +306,64 @@ Koneksi conn= new Koneksi();
         tblPerangkingan.setPreferredSize(new java.awt.Dimension(1268, 751));
         jScrollPane3.setViewportView(tblPerangkingan);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Tabel Perangkingan");
+        jspPerangkingan.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 125, 1160, 330));
 
-        javax.swing.GroupLayout panel4Layout = new javax.swing.GroupLayout(panel4);
-        panel4.setLayout(panel4Layout);
-        panel4Layout.setHorizontalGroup(
-            panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1252, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panel4Layout.setVerticalGroup(
-            panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(348, Short.MAX_VALUE))
-        );
+        jPanel1.add(jspPerangkingan, "card7");
 
-        jspPerangkingan.setViewportView(panel4);
+        jspAlternatif.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmAlternatif.png"))); // NOI18N
+        jspAlternatif.setPreferredSize(new java.awt.Dimension(1268, 610));
+        jspAlternatif.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.add(jspPerangkingan, "card8");
-
-        pnTambahData.setBackground(new java.awt.Color(255, 255, 204));
-
-        jPanel5.setLayout(new java.awt.GridLayout(0, 1, 5, 5));
-
-        jTextField1.setText("Masukkan Nama");
-        jPanel5.add(jTextField1);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Penghasilan", "1-<3 Juta", "3-<5 juta", "5-<7 juta", ">9 Juta", " " }));
-        jPanel5.add(jComboBox1);
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Jaminan Kredit", "<10 Juta", ">10 Juta - 25 Juta", ">25 Juta - 35 Juta", ">35 Juta - 50 Juta", ">50 Juta" }));
-        jPanel5.add(jComboBox2);
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Status Usaha", "Milik Bersama", "Milik Keluarga", "Milik Pribadi" }));
-        jPanel5.add(jComboBox3);
-
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Kondisi Usaha", "Usaha Macet", "Usaha Diragukan", "Usaha Mulai Berkembang", "Usaha Berkembang", "Usaha Berkembang Pesat" }));
-        jPanel5.add(jComboBox4);
-
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Kepribadian Nasabah", "Sangat Kurang", "Kurang", "Cukup", "Baik", "Sangat Baik" }));
-        jPanel5.add(jComboBox5);
-
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Harta Milik", ">25 Juta", ">50 Juta", ">75 Juta", ">100 Juta", ">125 Juta" }));
-        jPanel5.add(jComboBox6);
-
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kemampuan Melunasi Hutang", "Sangat Kurang", "Kurang", "Cukup", "Baik", "Sangat Baik" }));
-        jComboBox7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox7ActionPerformed(evt);
+        tblAlternatif.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "No", "Nama", "Penghasilan", "Jaminan", "Status Usaha", "Kondisi Usaha", "Kepribadian", "Harta Milik", "Kemampuan", "Tanggungan", "Kepemilikan Rumah", "Penghasilan Tambahan"
             }
-        });
-        jPanel5.add(jComboBox7);
+        ));
+        tblAlternatif.setPreferredSize(new java.awt.Dimension(1268, 751));
+        jScrollPane1.setViewportView(tblAlternatif);
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tanggungan Hidup", ">11 Orang", "9-11 Orang", "6-8 Orang", "3-5 Orang", "1-2 Orang" }));
-        jPanel5.add(jComboBox8);
+        jspAlternatif.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 125, 1252, 340));
 
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kepemilikan Rumah", "Kontrak", "Ikut Orang Tua", "Milik Pribadi" }));
-        jPanel5.add(jComboBox9);
+        jPanel1.add(jspAlternatif, "card7");
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kepemilikan Rumah", ">1 Juta", ">2 Juta", ">3 Juta", ">4 Juta", ">5 Juta" }));
-        jPanel5.add(jComboBox10);
+        jspNormalisasi.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmNormalisasi.png"))); // NOI18N
+        jspNormalisasi.setPreferredSize(new java.awt.Dimension(1268, 610));
+        jspNormalisasi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton5.setText("Simpan");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+        tblNormalisasi.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        });
+        ));
+        tblNormalisasi.setPreferredSize(new java.awt.Dimension(1168, 751));
+        jScrollPane2.setViewportView(tblNormalisasi);
 
-        jPanel6.setBackground(new java.awt.Color(255, 255, 153));
-        jPanel6.setLayout(new java.awt.GridLayout(0, 1, 5, 5));
+        jspNormalisasi.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 125, 1180, 330));
 
-        jLabel6.setText("Nama");
-        jPanel6.add(jLabel6);
+        jPanel1.add(jspNormalisasi, "card7");
 
-        jLabel7.setText("Penghasilan");
-        jPanel6.add(jLabel7);
+        panel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 149, 1230, 570));
 
-        jLabel8.setText("Jaminan Kredit");
-        jPanel6.add(jLabel8);
-
-        jLabel9.setText("Status Usaha");
-        jPanel6.add(jLabel9);
-
-        jLabel10.setText("Kondisi Usaha");
-        jPanel6.add(jLabel10);
-
-        jLabel11.setText("Kepribadian Nasabah");
-        jPanel6.add(jLabel11);
-
-        jLabel12.setText("Harta Milik");
-        jPanel6.add(jLabel12);
-
-        jLabel13.setText("Kemampuan Pelunasan");
-        jPanel6.add(jLabel13);
-
-        jLabel14.setText("Tanggungan Hidup");
-        jPanel6.add(jLabel14);
-
-        jLabel15.setText("Kepemilikan Rumah");
-        jPanel6.add(jLabel15);
-
-        jLabel16.setText("Penghasilan Tambahan");
-        jPanel6.add(jLabel16);
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setText("Form Tambah Data ");
-
-        javax.swing.GroupLayout pnTambahDataLayout = new javax.swing.GroupLayout(pnTambahData);
-        pnTambahData.setLayout(pnTambahDataLayout);
-        pnTambahDataLayout.setHorizontalGroup(
-            pnTambahDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnTambahDataLayout.createSequentialGroup()
-                .addGroup(pnTambahDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnTambahDataLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(pnTambahDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnTambahDataLayout.createSequentialGroup()
-                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(104, 104, 104)
-                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel5)))
-                    .addGroup(pnTambahDataLayout.createSequentialGroup()
-                        .addGap(130, 130, 130)
-                        .addComponent(jButton5)))
-                .addContainerGap(2208, Short.MAX_VALUE))
-        );
-        pnTambahDataLayout.setVerticalGroup(
-            pnTambahDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnTambahDataLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnTambahDataLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(32, 32, 32)
-                .addComponent(jButton5)
-                .addContainerGap(392, Short.MAX_VALUE))
-        );
-
-        jspTambahData.setViewportView(pnTambahData);
-
-        jPanel1.add(jspTambahData, "card2");
-
-        javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
-        panel1.setLayout(panel1Layout);
-        panel1Layout.setHorizontalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addGap(6, 6, 6))
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        panel1Layout.setVerticalGroup(
-            panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-
-        getContentPane().add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 720));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        jspHome.setVisible(false);
        jspTambahData.setVisible(true);
         jspAlternatif.setVisible(false);
         jspNormalisasi.setVisible(false);
@@ -489,23 +372,27 @@ Koneksi conn= new Koneksi();
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        tabelmodel();
+        jspHome.setVisible(false);
        jspAlternatif.setVisible(true);
         jspTambahData.setVisible(false);
         jspNormalisasi.setVisible(false);
         jspPerangkingan.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
+    private void cbKemampuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbKemampuanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox7ActionPerformed
+    }//GEN-LAST:event_cbKemampuanActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        simpan();
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         normalisasi();
+        jspHome.setVisible(false);
         jspNormalisasi.setVisible(true);
         jspAlternatif.setVisible(false);
         jspTambahData.setVisible(false);
@@ -515,11 +402,30 @@ Koneksi conn= new Koneksi();
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         cariperingkat();
+        jspHome.setVisible(false);
         jspAlternatif.setVisible(false);
         jspTambahData.setVisible(false);
         jspNormalisasi.setVisible(false);
         jspPerangkingan.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void cbPenghasilanItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbPenghasilanItemStateChanged
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_cbPenghasilanItemStateChanged
+
+    private void cbPenghasilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPenghasilanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbPenghasilanActionPerformed
+
+    private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
+        // TODO add your handling code here:
+        jspHome.setVisible(true);
+        jspAlternatif.setVisible(false);
+        jspTambahData.setVisible(false);
+        jspNormalisasi.setVisible(false);
+        jspPerangkingan.setVisible(false);
+    }//GEN-LAST:event_btnHomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -557,60 +463,43 @@ Koneksi conn= new Koneksi();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnHome;
+    private usu.widget.Button button1;
+    private javax.swing.JComboBox<String> cbHarta;
+    private javax.swing.JComboBox<String> cbJaminan;
+    private javax.swing.JComboBox<String> cbKemampuan;
+    private javax.swing.JComboBox<String> cbKepemilikan;
+    private javax.swing.JComboBox<String> cbKepribadian;
+    private javax.swing.JComboBox<String> cbKondisi;
+    private javax.swing.JComboBox<String> cbPTambahan;
+    private javax.swing.JComboBox<String> cbPenghasilan;
+    private javax.swing.JComboBox<String> cbStatus;
+    private javax.swing.JComboBox<String> cbTanggungan;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox10;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JComboBox<String> jComboBox9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JScrollPane jspAlternatif;
-    private javax.swing.JScrollPane jspNormalisasi;
-    private javax.swing.JScrollPane jspPerangkingan;
-    private javax.swing.JScrollPane jspTambahData;
+    private usu.widget.Panel jspAlternatif;
+    private javax.swing.JScrollPane jspHome;
+    private usu.widget.Panel jspNormalisasi;
+    private usu.widget.Panel jspPerangkingan;
+    private usu.widget.Panel jspTambahData;
     private usu.widget.Panel panel1;
-    private usu.widget.Panel panel3;
-    private usu.widget.Panel panel4;
-    private usu.widget.Panel pnAlternatif;
-    private usu.widget.Panel pnTambahData;
+    private usu.widget.Panel panel2;
+    private usu.widget.Panel panel6;
     private javax.swing.JTable tblAlternatif;
     private javax.swing.JTable tblNormalisasi;
     private javax.swing.JTable tblPerangkingan;
-    private javax.swing.JLabel tfAlternatif;
+    private javax.swing.JTextField tfNama;
     // End of variables declaration//GEN-END:variables
 public void tabelmodel(){
        tb =new DefaultTableModel();
@@ -632,8 +521,7 @@ public void tabelmodel(){
          ResultSet res = conn.ambilData("select *from tbl_alternatif ");
         while (res.next()){
                     tb.addRow(
-                            new Object[]{
-                                res.getString(1),
+                            new Object[]{                                
                                 res.getString(2),
                                 res.getString(3),
                                 res.getString(4),
@@ -643,7 +531,8 @@ public void tabelmodel(){
                                 res.getString(8),
                                 res.getString(9),
                                 res.getString(10),
-                                res.getString(11)
+                                res.getString(11),
+                                res.getString(12)
                             });
                 } 
       
@@ -654,7 +543,7 @@ public void tabelmodel(){
      }
 public void tabelmodelnormalisasi(){
        tb2 =new DefaultTableModel();
-       tb2.addColumn("No.");
+//       tb2.addColumn("No.");
        tb2.addColumn("Nama");
        tb2.addColumn("Kreteria 1");
        tb2.addColumn("Kreteria 2");
@@ -704,7 +593,7 @@ public  void normalisasi(){
         tabelmodelnormalisasi();
         while (res2.next()){
             tb2.addRow(new Object[]{
-                res2.getString(1),
+//                res2.getString(1),
                 res2.getString(2),
                 (res2.getFloat(3)/Float.valueOf(max.get(0).toString())),
                 (res2.getFloat(4)/Float.valueOf(max.get(1).toString())),
@@ -715,7 +604,7 @@ public  void normalisasi(){
                 (res2.getFloat(9)/Float.valueOf(max.get(6).toString())),
                 (res2.getFloat(10)/Float.valueOf(max.get(7).toString())),
                 (res2.getFloat(11)/Float.valueOf(max.get(8).toString())),
-                (res2.getFloat(12)/Float.valueOf(max.get(9).toString())),
+                (res2.getFloat(12)/Float.valueOf(max.get(9).toString()))
                 
             });
                           
@@ -774,16 +663,16 @@ public void tabelmodelPERINGKAT(){
                double r9;
                double r10;
                double w;
-                r1 = (Float.valueOf(tblNormalisasi.getValueAt(x, 2).toString())*Float.valueOf(mm.get(0).toString()));
-                r2=(Float.valueOf(tblNormalisasi.getValueAt(x, 3).toString())*Float.valueOf(mm.get(1).toString()));
-                r3=(Float.valueOf(tblNormalisasi.getValueAt(x, 4).toString())*Float.valueOf(mm.get(2).toString()));
-                r4=(Float.valueOf(tblNormalisasi.getValueAt(x, 5).toString())*Float.valueOf(mm.get(3).toString()));
-                r5=(Float.valueOf(tblNormalisasi.getValueAt(x, 6).toString())*Float.valueOf(mm.get(4).toString()));
-                r6=(Float.valueOf(tblNormalisasi.getValueAt(x, 7).toString())*Float.valueOf(mm.get(5).toString()));
-                r7=(Float.valueOf(tblNormalisasi.getValueAt(x, 8).toString())*Float.valueOf(mm.get(6).toString()));
-                r8=(Float.valueOf(tblNormalisasi.getValueAt(x, 9).toString())*Float.valueOf(mm.get(7).toString()));
-                r9=(Float.valueOf(tblNormalisasi.getValueAt(x, 10).toString())*Float.valueOf(mm.get(8).toString()));
-                r10=(Float.valueOf(tblNormalisasi.getValueAt(x, 11).toString())*Float.valueOf(mm.get(9).toString()));
+                r1=(Float.valueOf(tblNormalisasi.getValueAt(x, 1).toString())*Float.valueOf(mm.get(0).toString()));
+                r2=(Float.valueOf(tblNormalisasi.getValueAt(x, 2).toString())*Float.valueOf(mm.get(1).toString()));
+                r3=(Float.valueOf(tblNormalisasi.getValueAt(x, 3).toString())*Float.valueOf(mm.get(2).toString()));
+                r4=(Float.valueOf(tblNormalisasi.getValueAt(x, 4).toString())*Float.valueOf(mm.get(3).toString()));
+                r5=(Float.valueOf(tblNormalisasi.getValueAt(x, 5).toString())*Float.valueOf(mm.get(4).toString()));
+                r6=(Float.valueOf(tblNormalisasi.getValueAt(x, 6).toString())*Float.valueOf(mm.get(5).toString()));
+                r7=(Float.valueOf(tblNormalisasi.getValueAt(x, 7).toString())*Float.valueOf(mm.get(6).toString()));
+                r8=(Float.valueOf(tblNormalisasi.getValueAt(x, 8).toString())*Float.valueOf(mm.get(7).toString()));
+                r9=(Float.valueOf(tblNormalisasi.getValueAt(x, 9).toString())*Float.valueOf(mm.get(8).toString()));
+                r10=(Float.valueOf(tblNormalisasi.getValueAt(x, 10).toString())*Float.valueOf(mm.get(9).toString()));
                 
                 w=r1+r2+r3+r4+r5+r6+r7+r8+r9+r10;
             String sql = "insert into tbl_peringkat  values"+
@@ -796,16 +685,172 @@ public void tabelmodelPERINGKAT(){
            JOptionPane.showMessageDialog(this, ex);
         }
        }
-//   public int simpan(){        
-//        String sql="insert into tbl_kriteria "+
-//	"values"+
-//	"('"+jTextField1.getText()+"', "+
-//	"'"+jTextField2.getText()+"', "+
-//	"'"+jTextField3.getText()+"', "+
-//	"'"+jTextField4.getText()+"', "+
-//        "'"+jTextField5.getText()+"'"+
-//	")";               
-//        conn.simpanData(sql);
-//       return 0;
-//    }
+   public int simpan(){
+       String nama = tfNama.getText();
+       tb1();
+       tb2();
+       tb3();
+       tb4();
+       tb5();
+       tb6();
+       tb7();
+       tb8();
+       tb9();
+       tb10();
+       
+       
+        String sql="insert into tbl_Alternatif values(NULL,'"+ nama +"','"+ bb1 +"','" + bb2 + "','"+ bb3 +"','" + bb4 +"','" + bb5 +"','"+ bb6 +"','" +bb7+"','"+ bb8 +"','" + bb9 + "','" + bb10+"')";               
+        conn.simpanData(sql);
+       return 0;
+    }
+   public int tb1(){
+       if(cbPenghasilan.getSelectedItem().equals("1-<3 Juta")){
+            bb1 = 1;
+        }else if(cbPenghasilan.getSelectedItem().equals("3-<5 juta")){
+            bb1 = 2;
+        }else if(cbPenghasilan.getSelectedItem().equals("5-<7 juta")){
+            bb1 = 3;
+        }else if(cbPenghasilan.getSelectedItem().equals(">9 Juta")){
+            bb1 = 4;
+        }else{
+            JOptionPane.showMessageDialog(null,"Pilih Penghasilan");
+        }
+       return 0;
+   }
+   public int tb2(){
+       if(cbJaminan.getSelectedItem().equals("<10 Juta")){
+            bb2 = 1;
+        }else if(cbJaminan.getSelectedItem().equals(">10 Juta - 25 Juta")){
+            bb2 = 2;
+        }else if(cbJaminan.getSelectedItem().equals(">25 Juta - 35 Juta")){
+            bb2 = 3;
+        }else if(cbJaminan.getSelectedItem().equals(">35 Juta - 50 Juta")){
+            bb2 = 4;
+        }else if(cbJaminan.getSelectedItem().equals(">50 Juta")){
+            bb2 = 5;
+        }else{
+            JOptionPane.showMessageDialog(null,"Pilih Jaminan");
+        }
+       return 0;
+   }
+   public int tb3(){
+       if(cbStatus.getSelectedItem().equals("Milik Bersama")){
+            bb3 = 1;
+        }else if(cbStatus.getSelectedItem().equals("Milik Keluarga")){
+            bb3 = 2;
+        }else if(cbStatus.getSelectedItem().equals("Milik Pribadi")){
+            bb3 = 3;
+        }else{
+            JOptionPane.showMessageDialog(null,"Pilih Status Usaha");
+        }
+       return 0;
+   }
+    public int tb4(){
+       if(cbKondisi.getSelectedItem().equals("Usaha Macet")){
+            bb4 = 1;
+        }else if(cbKondisi.getSelectedItem().equals("Usaha Diragukan")){
+            bb4 = 2;
+        }else if(cbKondisi.getSelectedItem().equals("Usaha Mulai Berkembang")){
+            bb4 = 3;
+        }else if(cbKondisi.getSelectedItem().equals("Usaha Berkembang")){
+            bb4 = 4;
+        }else if(cbKondisi.getSelectedItem().equals("Usaha Berkembang Pesat")){
+            bb4 = 5;
+        }else{
+            JOptionPane.showMessageDialog(null,"Pilih Kondisi Usaha");
+        }
+       return 0;
+   }
+    public int tb5(){
+       if(cbKepribadian.getSelectedItem().equals("Sangat Kurang")){
+            bb5 = 1;
+        }else if(cbKepribadian.getSelectedItem().equals("Kurang")){
+            bb5 = 2;
+        }else if(cbKepribadian.getSelectedItem().equals("Cukup")){
+            bb5 = 3;
+        }else if(cbKepribadian.getSelectedItem().equals("Baik")){
+            bb5 = 4;
+        }else if(cbKepribadian.getSelectedItem().equals("Sangat Baik")){
+            bb5 = 5;
+        }else{
+            JOptionPane.showMessageDialog(null,"Pilih Kepribadian Nasabah");
+        }
+       return 0;
+   }
+    public int tb6(){
+       if(cbHarta.getSelectedItem().equals(">25 Juta")){
+            bb6 = 1;
+        }else if(cbHarta.getSelectedItem().equals(">50 Juta")){
+            bb6 = 2;
+        }else if(cbHarta.getSelectedItem().equals(">75 Juta")){
+            bb6 = 3;
+        }else if(cbHarta.getSelectedItem().equals(">100 Juta")){
+            bb6 = 4;
+        }else if(cbHarta.getSelectedItem().equals(">125 Juta")){
+            bb6 = 5;
+        }else{
+            JOptionPane.showMessageDialog(null,"Pilih Harta Milik");
+        }
+       return 0;
+   }
+    public int tb7(){
+       if(cbKemampuan.getSelectedItem().equals("Sangat Kurang")){
+            bb7 = 1;
+        }else if(cbKemampuan.getSelectedItem().equals("Kurang")){
+            bb7 = 2;
+        }else if(cbKemampuan.getSelectedItem().equals("Cukup")){
+            bb7 = 3;
+        }else if(cbKemampuan.getSelectedItem().equals("Baik")){
+            bb7 = 4;
+        }else if(cbKemampuan.getSelectedItem().equals("Sangat Baik")){
+            bb7 = 5;
+        }else{
+            JOptionPane.showMessageDialog(null,"Pilih Kemampuan Melunasi Hutang");
+        }
+       return 0;
+   }
+    public int tb8(){
+       if(cbTanggungan.getSelectedItem().equals(">11 Orang")){
+            bb8 = 1;
+        }else if(cbTanggungan.getSelectedItem().equals("9-11 Orang")){
+            bb8 = 2;
+        }else if(cbTanggungan.getSelectedItem().equals("6-8 Orang")){
+            bb8 = 3;
+        }else if(cbTanggungan.getSelectedItem().equals("3-5 Orang")){
+            bb8 = 4;
+        }else if(cbTanggungan.getSelectedItem().equals("1-2 Orang")){
+            bb8 = 5;
+        }else{
+            JOptionPane.showMessageDialog(null,"Pilih Jumlah Tanggungan Hidup");
+        }
+       return 0;
+   }
+    public int tb9(){
+       if(cbKepemilikan.getSelectedItem().equals("Kontrak")){
+            bb9 = 1;
+        }else if(cbKepemilikan.getSelectedItem().equals("Ikut Orang Tua")){
+            bb9 = 2;
+        }else if(cbKepemilikan.getSelectedItem().equals("Milik Pribadi")){
+            bb9 = 3;
+        }else{
+            JOptionPane.showMessageDialog(null,"Pilih Kepemilikan Rumah");
+        }
+       return 0;
+   }
+    public int tb10(){
+       if(cbPTambahan.getSelectedItem().equals(">1 Juta")){
+            bb10 = 1;
+        }else if(cbPTambahan.getSelectedItem().equals(">2 Juta")){
+            bb10 = 2;
+        }else if(cbPTambahan.getSelectedItem().equals(">3 Juta")){
+            bb10 = 3;
+        }else if(cbPTambahan.getSelectedItem().equals(">4 Juta")){
+            bb10 = 4;
+        }else if(cbPTambahan.getSelectedItem().equals(">5 Juta")){
+            bb10 = 5;
+        }else{
+            JOptionPane.showMessageDialog(null,"Pilih Penghasilan Tambahan");
+        }
+       return 0;
+   }
 }
