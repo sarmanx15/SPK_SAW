@@ -58,6 +58,18 @@ Koneksi conn= new Koneksi();
         jPanel1 = new javax.swing.JPanel();
         jspHome = new javax.swing.JScrollPane();
         panel2 = new usu.widget.Panel();
+        jspPerangkingan = new usu.widget.Panel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tblPerangkingan = new javax.swing.JTable();
+        jspNormalisasi = new usu.widget.Panel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblNormalisasi = new javax.swing.JTable();
+        jspAlternatif = new usu.widget.Panel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblAlternatif = new javax.swing.JTable();
+        panel3 = new usu.widget.Panel();
+        button2 = new usu.widget.Button();
+        button3 = new usu.widget.Button();
         jspTambahData = new usu.widget.Panel();
         jPanel5 = new javax.swing.JPanel();
         tfNama = new javax.swing.JTextField();
@@ -74,15 +86,6 @@ Koneksi conn= new Koneksi();
         jPanel2 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
         button1 = new usu.widget.Button();
-        jspPerangkingan = new usu.widget.Panel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        tblPerangkingan = new javax.swing.JTable();
-        jspAlternatif = new usu.widget.Panel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblAlternatif = new javax.swing.JTable();
-        jspNormalisasi = new usu.widget.Panel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tblNormalisasi = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -169,7 +172,7 @@ Koneksi conn= new Koneksi();
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -196,6 +199,96 @@ Koneksi conn= new Koneksi();
 
         jPanel1.add(jspHome, "card6");
 
+        jspPerangkingan.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmRangking.png"))); // NOI18N
+        jspPerangkingan.setPreferredSize(new java.awt.Dimension(1268, 610));
+        jspPerangkingan.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblPerangkingan.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tblPerangkingan.setEnabled(false);
+        tblPerangkingan.setPreferredSize(new java.awt.Dimension(1268, 751));
+        jScrollPane3.setViewportView(tblPerangkingan);
+
+        jspPerangkingan.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 125, 1160, 330));
+
+        jPanel1.add(jspPerangkingan, "card7");
+
+        jspNormalisasi.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmNormalisasi.png"))); // NOI18N
+        jspNormalisasi.setPreferredSize(new java.awt.Dimension(1268, 610));
+        jspNormalisasi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblNormalisasi.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tblNormalisasi.setEnabled(false);
+        tblNormalisasi.setPreferredSize(new java.awt.Dimension(1168, 751));
+        jScrollPane2.setViewportView(tblNormalisasi);
+
+        jspNormalisasi.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 125, 1180, 330));
+
+        jPanel1.add(jspNormalisasi, "card7");
+
+        jspAlternatif.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmAlternatif.png"))); // NOI18N
+        jspAlternatif.setPreferredSize(new java.awt.Dimension(1268, 610));
+        jspAlternatif.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblAlternatif.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "No", "Nama", "Penghasilan", "Jaminan", "Status Usaha", "Kondisi Usaha", "Kepribadian", "Harta Milik", "Kemampuan", "Tanggungan", "Kepemilikan Rumah", "Penghasilan Tambahan"
+            }
+        ));
+        tblAlternatif.setPreferredSize(new java.awt.Dimension(1268, 751));
+        jScrollPane1.setViewportView(tblAlternatif);
+
+        jspAlternatif.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 125, 1252, 340));
+
+        panel3.setLayout(new java.awt.GridLayout(1, 0, 5, 0));
+
+        button2.setText("Tambah");
+        button2.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
+        button2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button2ActionPerformed(evt);
+            }
+        });
+        panel3.add(button2);
+
+        button3.setText("Hapus");
+        button3.setFont(new java.awt.Font("Consolas", 1, 14)); // NOI18N
+        button3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button3ActionPerformed(evt);
+            }
+        });
+        panel3.add(button3);
+
+        jspAlternatif.add(panel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 220, 30));
+
+        jPanel1.add(jspAlternatif, "card7");
+
         jspTambahData.setBackground(new java.awt.Color(255, 255, 204));
         jspTambahData.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmTambahData2.png"))); // NOI18N
         jspTambahData.setBackgroundImageType(usu.widget.constan.BackgroundConstan.BACKGROUND_IMAGE_STRECT);
@@ -207,7 +300,6 @@ Koneksi conn= new Koneksi();
         jPanel5.setLayout(new java.awt.GridLayout(0, 1, 5, 5));
 
         tfNama.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
-        tfNama.setText("Masukkan Nama");
         jPanel5.add(tfNama);
 
         cbPenghasilan.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
@@ -262,7 +354,12 @@ Koneksi conn= new Koneksi();
         jPanel5.add(cbKepemilikan);
 
         cbPTambahan.setFont(new java.awt.Font("Consolas", 2, 14)); // NOI18N
-        cbPTambahan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kepemilikan Rumah", ">1 Juta", ">2 Juta", ">3 Juta", ">4 Juta", ">5 Juta" }));
+        cbPTambahan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Penghasilan Tambahan", ">1 Juta", ">2 Juta", ">3 Juta", ">4 Juta", ">5 Juta" }));
+        cbPTambahan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbPTambahanActionPerformed(evt);
+            }
+        });
         jPanel5.add(cbPTambahan);
 
         jspTambahData.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 248, 304));
@@ -288,72 +385,6 @@ Koneksi conn= new Koneksi();
 
         jPanel1.add(jspTambahData, "card7");
 
-        jspPerangkingan.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmRangking.png"))); // NOI18N
-        jspPerangkingan.setPreferredSize(new java.awt.Dimension(1268, 610));
-        jspPerangkingan.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        tblPerangkingan.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        tblPerangkingan.setPreferredSize(new java.awt.Dimension(1268, 751));
-        jScrollPane3.setViewportView(tblPerangkingan);
-
-        jspPerangkingan.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 125, 1160, 330));
-
-        jPanel1.add(jspPerangkingan, "card7");
-
-        jspAlternatif.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmAlternatif.png"))); // NOI18N
-        jspAlternatif.setPreferredSize(new java.awt.Dimension(1268, 610));
-        jspAlternatif.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        tblAlternatif.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "No", "Nama", "Penghasilan", "Jaminan", "Status Usaha", "Kondisi Usaha", "Kepribadian", "Harta Milik", "Kemampuan", "Tanggungan", "Kepemilikan Rumah", "Penghasilan Tambahan"
-            }
-        ));
-        tblAlternatif.setPreferredSize(new java.awt.Dimension(1268, 751));
-        jScrollPane1.setViewportView(tblAlternatif);
-
-        jspAlternatif.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 125, 1252, 340));
-
-        jPanel1.add(jspAlternatif, "card7");
-
-        jspNormalisasi.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmNormalisasi.png"))); // NOI18N
-        jspNormalisasi.setPreferredSize(new java.awt.Dimension(1268, 610));
-        jspNormalisasi.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        tblNormalisasi.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        tblNormalisasi.setPreferredSize(new java.awt.Dimension(1168, 751));
-        jScrollPane2.setViewportView(tblNormalisasi);
-
-        jspNormalisasi.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 125, 1180, 330));
-
-        jPanel1.add(jspNormalisasi, "card7");
-
         panel1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 149, 1230, 570));
 
         getContentPane().add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 720));
@@ -363,11 +394,13 @@ Koneksi conn= new Koneksi();
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
         jspHome.setVisible(false);
        jspTambahData.setVisible(true);
         jspAlternatif.setVisible(false);
         jspNormalisasi.setVisible(false);
         jspPerangkingan.setVisible(false);
+        resetField();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -427,6 +460,42 @@ Koneksi conn= new Koneksi();
         jspPerangkingan.setVisible(false);
     }//GEN-LAST:event_btnHomeActionPerformed
 
+    private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
+        // TODO add your handling code here:
+        jspHome.setVisible(false);
+        jspTambahData.setVisible(true);
+        jspAlternatif.setVisible(false);
+        jspNormalisasi.setVisible(false);
+        jspPerangkingan.setVisible(false);
+        resetField();
+    }//GEN-LAST:event_button2ActionPerformed
+
+    private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
+        // TODO add your handling code here:
+        if((tblAlternatif.getSelectedRow()==-1)){
+            JOptionPane.showMessageDialog(null, "Silahkan pilih baris yang ingin dihapus pada Tabel..");            
+        }
+        else{ 
+            int pilihan = JOptionPane.showConfirmDialog(this,"Apakah Anda Ingin Menghapus data? ","Konfirmasi",JOptionPane.YES_NO_OPTION);
+                if (pilihan==0) {
+                int baris = tblAlternatif.getSelectedRow();
+                String id = tblAlternatif.getValueAt(baris, 0).toString();
+
+                if (HapusData(id)) {
+                    JOptionPane.showMessageDialog(null, "Berhasil Hapus Data");
+                } else {
+                    JOptionPane.showConfirmDialog(null, "Gagal Hapus Data");
+
+                }
+                 tabelmodel();
+            }
+        }
+    }//GEN-LAST:event_button3ActionPerformed
+
+    private void cbPTambahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPTambahanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbPTambahanActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -465,6 +534,8 @@ Koneksi conn= new Koneksi();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHome;
     private usu.widget.Button button1;
+    private usu.widget.Button button2;
+    private usu.widget.Button button3;
     private javax.swing.JComboBox<String> cbHarta;
     private javax.swing.JComboBox<String> cbJaminan;
     private javax.swing.JComboBox<String> cbKemampuan;
@@ -495,6 +566,7 @@ Koneksi conn= new Koneksi();
     private usu.widget.Panel jspTambahData;
     private usu.widget.Panel panel1;
     private usu.widget.Panel panel2;
+    private usu.widget.Panel panel3;
     private usu.widget.Panel panel6;
     private javax.swing.JTable tblAlternatif;
     private javax.swing.JTable tblNormalisasi;
@@ -503,6 +575,7 @@ Koneksi conn= new Koneksi();
     // End of variables declaration//GEN-END:variables
 public void tabelmodel(){
        tb =new DefaultTableModel();
+       tb.addColumn("ID");
        tb.addColumn("Nama");
        tb.addColumn("Kreteria 1");
        tb.addColumn("Kreteria 2");
@@ -522,6 +595,7 @@ public void tabelmodel(){
         while (res.next()){
                     tb.addRow(
                             new Object[]{                                
+                                res.getString(1),
                                 res.getString(2),
                                 res.getString(3),
                                 res.getString(4),
@@ -541,6 +615,20 @@ public void tabelmodel(){
            JOptionPane.showMessageDialog(this, ex);
         }   
      }
+public void resetField(){
+    tfNama.setText("");
+    cbPenghasilan.setSelectedItem("Pilih Penghasilan");
+    cbJaminan.setSelectedItem("Pilih Jaminan Kredit");
+    cbStatus.setSelectedItem("Pilih Status Usaha");
+    cbKondisi.setSelectedItem("Pilih Kondisi Usaha");
+    cbKepribadian.setSelectedItem("Pilih Kepribadian Nasabah");
+    cbHarta.setSelectedItem("Pilih Harta Milik");
+    cbKemampuan.setSelectedItem("Kemampuan Melunasi Hutang");
+    cbTanggungan.setSelectedItem("Tanggungan Hidup");
+    cbKepemilikan.setSelectedItem("Kepemilikan Rumah");
+    cbPTambahan.setSelectedItem("Penghasilan Tambahan");
+    
+}
 public void tabelmodelnormalisasi(){
        tb2 =new DefaultTableModel();
 //       tb2.addColumn("No.");
@@ -698,9 +786,15 @@ public void tabelmodelPERINGKAT(){
        tb9();
        tb10();
        
-       
+       if(tfNama.getText().length()==0){
+           JOptionPane.showMessageDialog(null,"Masukkan Nama dengan benar");
+       }
+       else{
         String sql="insert into tbl_Alternatif values(NULL,'"+ nama +"','"+ bb1 +"','" + bb2 + "','"+ bb3 +"','" + bb4 +"','" + bb5 +"','"+ bb6 +"','" +bb7+"','"+ bb8 +"','" + bb9 + "','" + bb10+"')";               
         conn.simpanData(sql);
+            JOptionPane.showMessageDialog(null,"Data berhasil disimpan");
+               
+       }
        return 0;
     }
    public int tb1(){
@@ -853,4 +947,10 @@ public void tabelmodelPERINGKAT(){
         }
        return 0;
    }
+    
+    public boolean HapusData(String id) {
+        String sql = "DELETE FROM tbl_Alternatif WHERE ID = " + id + ";";
+        conn.hapusData(sql);
+        return true;
+    }
 }

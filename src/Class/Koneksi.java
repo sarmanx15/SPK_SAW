@@ -75,4 +75,13 @@ public class Koneksi {
             System.out.print(x);
         }        
     }
+    public void hapusData(String sql){
+        try{            
+            Koneksi();
+            st.executeUpdate(sql);
+        }catch(Exception x){
+            //JOptionPane.showMessageDialog(null,"Simpan Data Gagal, Pesan error : \n"+x);
+            System.out.print(x);
+        }        
+    }
 }
