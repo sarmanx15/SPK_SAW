@@ -56,8 +56,7 @@ Koneksi conn= new Koneksi();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jspHome = new javax.swing.JScrollPane();
-        panel2 = new usu.widget.Panel();
+        jspHome = new usu.widget.Panel();
         jspPerangkingan = new usu.widget.Panel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblPerangkingan = new javax.swing.JTable();
@@ -188,16 +187,12 @@ Koneksi conn= new Koneksi();
 
         jPanel1.setLayout(new java.awt.CardLayout());
 
-        jspHome.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-
-        panel2.setBackground(new java.awt.Color(153, 0, 204));
-        panel2.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/bgHome1.png"))); // NOI18N
-        panel2.setBackgroundImageType(usu.widget.constan.BackgroundConstan.BACKGROUND_IMAGE_TILED);
-        panel2.setPreferredSize(new java.awt.Dimension(1268, 610));
-        panel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jspHome.setViewportView(panel2);
-
-        jPanel1.add(jspHome, "card6");
+        jspHome.setBackground(new java.awt.Color(153, 0, 204));
+        jspHome.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/bgHome1.png"))); // NOI18N
+        jspHome.setBackgroundImageType(usu.widget.constan.BackgroundConstan.BACKGROUND_IMAGE_STRECT);
+        jspHome.setPreferredSize(new java.awt.Dimension(1268, 610));
+        jspHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(jspHome, "card7");
 
         jspPerangkingan.setBackgroundImage(new javax.swing.ImageIcon(getClass().getResource("/image/frmRangking.png"))); // NOI18N
         jspPerangkingan.setPreferredSize(new java.awt.Dimension(1268, 610));
@@ -560,12 +555,11 @@ Koneksi conn= new Koneksi();
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private usu.widget.Panel jspAlternatif;
-    private javax.swing.JScrollPane jspHome;
+    private usu.widget.Panel jspHome;
     private usu.widget.Panel jspNormalisasi;
     private usu.widget.Panel jspPerangkingan;
     private usu.widget.Panel jspTambahData;
     private usu.widget.Panel panel1;
-    private usu.widget.Panel panel2;
     private usu.widget.Panel panel3;
     private usu.widget.Panel panel6;
     private javax.swing.JTable tblAlternatif;
